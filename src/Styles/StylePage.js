@@ -13,6 +13,7 @@ export const StyleMain = styled.main`
     @media screen and (max-device-width: 800px){
         flex-direction: column;
     }
+
 `
 
 export const StyleSectionCards = styled.section`
@@ -24,9 +25,17 @@ export const StyleSectionCards = styled.section`
     background-position: top center;
     background-color: hsl(278, 68%, 11%);
 
-    @media screen and (max-device-width: 800px){
+    @media screen and (min-device-width: 500px) and (max-device-width: 800px){
         width: 100%;
         height: 30%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    @media screen  and (max-device-width: 500px){
+        width: 100%;
+        height: 50%;
+        border: 2px solid red;
         display: flex;
         flex-direction: column-reverse;
     }
@@ -40,7 +49,11 @@ export const StyleSectionForms = styled.section`
     align-items: center;
     justify-content: center;
 
-    @media screen (max-device-width: 800px) {
+    @media screen and (min-device-width: 500px) and (max-device-width: 800px) {
+        width: 80%;
+    }
+
+    @media screen and (max-device-width: 500px) {
         width: 100%;
     }
 `
@@ -55,6 +68,12 @@ export const StyleDivForm = styled.div`
         font-size: 12px;
         margin-bottom: 10px;
     }
+    
+    .errorMessage{
+        font-size: 8px;
+        color: hsl(0, 100%, 66%);
+        margin-bottom: 16px;
+    }
 
     input{
         border-radius: 8px;
@@ -62,7 +81,6 @@ export const StyleDivForm = styled.div`
         width: 100%;
         height: 40px;
         padding-left: 1vw;
-        margin-bottom: 24px;
         font-weight: 600;
     }
 
@@ -76,6 +94,10 @@ export const StyleDivForm = styled.div`
         border-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;
         outline: none;
         border-radius: 8px;
+    }
+
+    input:invalid{
+        border: 1px solid red;
     }
 
     .form-box{
@@ -116,8 +138,31 @@ export const StyleDivForm = styled.div`
         cursor: pointer;
     }
 
-    @media screen and (max-device-width: 500px){
+    @media screen and (min-device-width: 500px) and (max-device-width: 800px){
         width: 96%;
         height: 70%;
+    }
+
+    @media screen and (max-device-width: 500px){
+        width: 96%;
+        height: 100%;
+        justify-content: center;
+          
+
+        p{
+            font-size: 28px;
+        }
+
+        input{
+            height: 6vh;
+            font-size: 28px;
+            margin-bottom: 4vh;
+        }
+     
+        button{
+            height: 6vh;
+            font-size: 28px;
+        }
+
     }
 `

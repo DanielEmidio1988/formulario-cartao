@@ -17,7 +17,6 @@ export const StyleCard = styled.div`
     align-items: center;
 
     div{
-        border: 1px solid red;
         width: 90%;
         height: 33.33%;
         color: hsl(0, 0%, 100%);
@@ -61,28 +60,29 @@ export const StyleCard = styled.div`
     }
 
     @media screen and (max-device-width: 500px){
-        width: 80%;
-        height: 100%;
+        width: 72%;
+        height: 24vh;
         position: fixed;
-        top: 28%;
+        top: 16%;
         left: 4%;
+        z-index: 2;
 
         div:first-child{
             img{
-                margin-top: 100px;
+                margin-top: 4vh;
                 width: 20%;
             }
         }
 
         div:nth-child(2){
             h1{
-                font-size: 2.8vh;
+                font-size: 5vw;
             }
         }
     
         div:last-child{
             p{
-                font-size: 1.6vh;
+                font-size: 2vw;
             }
         }
     }

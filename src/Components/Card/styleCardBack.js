@@ -8,16 +8,19 @@ export const StyleCard = styled.div`
     background-image: url(${bgCardBack});
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
+    background-color: hsl(270, 3%, 87%);
+    // bac
     position: relative;
-    // z-index: 0;
-    top: 20%;
+    // top: 20%;
+    // left: 60%;
+    top: 8%;
     left: 60%;
+    box-shadow: 8px 8px 16px hsl(270, 3%, 87%);
 
     div{
         width: 100%;
         height: 100%;
-        border: 1px solid red;
 
         p{
             
@@ -42,10 +45,21 @@ export const StyleCard = styled.div`
 
 
     @media screen and (max-device-width: 500px){
-        width: 80%;
-        height: 100%;
+        width: 72%;
+        height: 24vh;
         position: fixed;
-        top: 0;
-        left: 12%;
+        top: 2%;
+        left: 18%;
+        z-index: 1;
+
+        div{
+
+            p{   
+                margin-top: 10.5vh;
+                margin-left: 54vw;
+                font-size: 3vw;
+            }
+        }
+
     }
 `
