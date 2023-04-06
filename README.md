@@ -27,15 +27,17 @@ Os usuários devem ser capazes de:
 ### Screenshot
 
 #### Mobile
-| <img src=".src/Assets/layout-design-mobile.png" width=200><br><sub>Padrão</sub> | <img src=".src/Assets/layout-active-mobile.png" width=200><br><sub>Ativo</sub> | <img src=".src/Assets/layout-sucess-mobile.png" width=200><br><sub>Sucesso</sub> |
+| <img src="./src/Assets/layout-design-mobile.png" width=200><br><sub>Padrão</sub> | <img src="./src/Assets/layout-active-mobile.png" width=200><br><sub>Ativo</sub> | <img src="./src/Assets/layout-sucess-mobile.png" width=200><br><sub>Sucesso</sub> |
 | :---: | :---: | :---: | 
 
+
+
 #### Tablet
-| <img src=".src/Assets/layout-design-tablet.png" width=400><br><sub>Padrão</sub> | <img src=".src/Assets/layout-active-tablet.png" width=400><br><sub>Ativo</sub> | <img src=".src/Assets/layout-sucess-tablet.png" width=400><br><sub>Sucesso</sub> |
+| <img src="./src/Assets/layout-design-tablet.png" width=400><br><sub>Padrão</sub> | <img src="./src/Assets/layout-active-tablet.png" width=400><br><sub>Ativo</sub> | <img src="./src/Assets/layout-sucess-tablet.png" width=400><br><sub>Sucesso</sub> |
 | :---: | :---: | :---: | 
 
 #### Desktop
-| <img src=".src/Assets/layout-design-desktop.png" width=600><br><sub>Padrão</sub> | <img src=".src/Assets/layout-active-desktop.png" width=600><br><sub>Ativo</sub> | <img src=".src/Assets/layout-sucess-desktop.png" width=600><br><sub>Sucesso</sub> |
+| <img src="./src/Assets/layout-design-desktop.png" width=600><br><sub>Padrão</sub> | <img src="./src/Assets/layout-active-desktop.png" width=600><br><sub>Ativo</sub> | <img src="./src/Assets/layout-sucess-desktop.png" width=600><br><sub>Sucesso</sub> |
 | :---: | :---: | :---: | 
 
 ### Links
