@@ -10,6 +10,7 @@ Esta é uma solução para o desafio [Interactive card details form challenge on
   - [Links](#links)
 - [Meu Processo](#meu-processo)
   - [Construido com](#construido-com)
+  - [O que aprendi](#o-que-aprendi)
 - [Autor](#autor)
 
 ## Visão Geral
@@ -42,8 +43,7 @@ Os usuários devem ser capazes de:
 
 ### Links
 
-- URL da solução: Adicione a URL da solução aqui
-- URL do site ao vivo: Adicione a URL do site ao vivo aqui
+- URL da solução: [clique aqui](https://formulario-cartao.vercel.app/)
 
 ## Meu processo
 
@@ -52,6 +52,56 @@ Os usuários devem ser capazes de:
 - Styled-Components
 - 'Mobile-First'
 - React - biblioteca JS
+
+### O Que Aprendi
+
+Durante este projeto, um dos pontos que gostei bastante de ter aprendido foi sobre a validação do número do cartão. No meu código, eu o apliquei em 3 funções, sendo o primeiro para validar os dados inserindo no Cartão, o segundo para formatar os dados no formato do cartão e o terceiro dentro do próprio onChange para que o usuário tenha ciência que digitou um valor inválido. 
+
+- validateForm()
+```bash
+      const cardNumber = props.accountClient.numbercard.replace(/\s+/g, '');
+      if (!/^\d{16}$/.test(cardNumber)) {
+        document.getElementsByName('numbercard')[0].style.borderColor = 'hsl(0, 100%, 66%)';
+        setValidateCardNumber(false);
+        props.accountClient.numbercard === '' ? setErrorMessageErrorCardNumber(`Can't be blank`) : setErrorMessageErrorCardNumber(`Wrong format, numbers only`)
+        isValid = false;
+      } else {
+        document.getElementsByName('numbercard')[0].style.borderColor = 'initial';
+        setValidateCardNumber(true);
+      }
+```
+
+- formatCardNumber()
+```bash
+    function formatCardNumber(number) {
+      // Daniel: Remove todos os espaços do número do cartão
+      const cleanNumber = number.replace(/\s+/g, '');
+  
+      // Daniel: Adiciona um espaço a cada 4 caracteres
+      const formattedNumber = cleanNumber.replace(/(\d{4})/g, '$1 ');
+  
+      // Daniel: Retorna o número formatado
+      return formattedNumber;
+    }
+
+```
+
+- onChangeAccountForm()
+```bash
+const formattedNumber = formatCardNumber(event.target.value);   
+          const cardNumber = event.target.value;    
+          if(isNaN(cardNumber.replace(/\s+/g, ''))){
+            setErrorMessageErrorCardNumber(`Wrong format, numbers only`)
+            document.getElementsByName('numbercard')[0].style.borderColor = 'hsl(0, 100%, 66%)'
+            setValidateCardNumber(false)
+          }else{
+            document.getElementsByName('numbercard')[0].style.borderColor = 'initial';
+            
+            setValidateCardNumber(true)
+          }
+          props.setAccountClient({ ...props.accountClient, [event.target.name]: formattedNumber });
+```
+
 
 ### Autor
 | [<img src="https://avatars.githubusercontent.com/u/111311678?v=4" width=115><br><sub>Daniel Emidio</sub>](https://github.com/DanielEmidio1988) |
