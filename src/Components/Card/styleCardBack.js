@@ -9,31 +9,25 @@ export const StyleCard = styled.div`
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: top center;
-    background-color: hsl(270, 3%, 87%);
-    // bac
     position: relative;
-    // top: 20%;
-    // left: 60%;
-    top: 8%;
+    top: 20%;
     left: 60%;
-    box-shadow: 8px 8px 16px hsl(270, 3%, 87%);
+    animation: fromCenter .7s .3s backwards;
 
     div{
         width: 100%;
         height: 100%;
 
         p{
-            
-            margin-top: 96px;
-            margin-left: 300px;
+            padding: 96px 0 0 300px;
             color: hsl(0, 0%, 100%);
             font-size: 14px;
-            font-weight: 300;
+            font-weight: 300;     
         }
     }
 
 
-    @media screen and (min-device-width: 1000px) and (max-device-width: 1200px){    
+    @media screen and (min-device-width: 1000px) and (max-device-width: 1200px){  
         top: 20%;
         left: 32%;
     }
@@ -43,6 +37,12 @@ export const StyleCard = styled.div`
         left: 4%;
     }
 
+    @media screen and (min-device-width: 500px) and (max-device-width: 800px){    
+        top: 2%;
+        left: 36%;
+        position: fixed;
+        z-index: 1;
+    }
 
     @media screen and (max-device-width: 500px){
         width: 72%;
@@ -55,11 +55,23 @@ export const StyleCard = styled.div`
         div{
 
             p{   
-                margin-top: 10.5vh;
-                margin-left: 54vw;
-                font-size: 3vw;
+                padding-top: 170px;
+                padding-left: 58vw;
+                font-size: 3vw;               
             }
         }
+    }
 
+    @keyframes fromCenter{
+        from{
+            opacity: 0;
+            transform: scale(0.5)
+            
+        }
+    
+        to{
+            opacity: 1;
+            transform: scale(1.0)      
+        }
     }
 `

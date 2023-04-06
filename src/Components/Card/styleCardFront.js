@@ -11,10 +11,11 @@ export const StyleCard = styled.div`
     background-position: center center;
     position: relative;
     top: 16%;
-    left: 36%;
+    left: 44%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fromCenter.7s .3s backwards;
 
     div{
         width: 90%;
@@ -59,6 +60,13 @@ export const StyleCard = styled.div`
         left: 4%;
     }
 
+    @media screen and (min-device-width: 500px) and (max-device-width: 800px){    
+        top: 16%;
+        left: 24%;
+        position: fixed;
+        z-index: 2;
+    }
+
     @media screen and (max-device-width: 500px){
         width: 72%;
         height: 24vh;
@@ -84,6 +92,19 @@ export const StyleCard = styled.div`
             p{
                 font-size: 2vw;
             }
+        }
+    }
+
+    @keyframes fromCenter{
+        from{
+            opacity: 0;
+            transform: scale(0.5)
+            
+        }
+    
+        to{
+            opacity: 1;
+            transform: scale(1.0)      
         }
     }
 `
